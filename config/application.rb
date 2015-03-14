@@ -22,5 +22,16 @@ module Vsystem
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.generators do |g|
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+      g.stylesheets false
+      g.javascripts false
+      g.routing_specs false
+      g.request_specs false
+      g.helper_specs false
+      g.view_specs false
+    end
+
   end
 end

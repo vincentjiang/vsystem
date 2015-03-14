@@ -1,8 +1,6 @@
 if ENV['RAILS_ENV'] == 'production'
-  puts "====== use rubygems source ======"
   source 'https://rubygems.org'
 else
-  puts "====== use taobao source ======"
   source 'https://ruby.taobao.org'
 end
 
@@ -19,6 +17,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'sdoc', '~> 0.4.0', group: :doc # bundle exec rake doc:rails generates the API under doc/api.
 gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
+gem "figaro" # 系统设置
 
 
 # Use Capistrano for deployment
@@ -29,8 +28,12 @@ group :development, :test do
   gem 'web-console', '~> 2.0' # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   
+  gem 'better_errors'
   gem 'awesome_print'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :production do

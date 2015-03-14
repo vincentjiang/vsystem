@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  root 'cms/users#new'
+
+  namespace 'cms' do
+    resources :users, except: :show
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

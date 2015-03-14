@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong New:
+  = @cms_user.new
+p
+  strong Create:
+  = @cms_user.create
+p
+  strong Index:
+  = @cms_user.index
+p
+  strong Edit:
+  = @cms_user.edit
+p
+  strong Update:
+  = @cms_user.update
+p
+  strong Destroy:
+  = @cms_user.destroy
+
+= link_to 'Edit', edit_cms_user_path(@cms_user)
+'|
+= link_to 'Back', cms_users_path
